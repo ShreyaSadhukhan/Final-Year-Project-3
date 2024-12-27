@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #121212;
+    height: 72px;
+}
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    gap: 800px;
+    padding: 16px 50px 16px 50px;
+}
+.navbar__logo_name {
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: outfit;
+    justify-content: space-between;
+    gap: 10px;
+}
+.navbar__menu {
+    display: flex;
+    gap: 20px;
+}
+.navbar__menu .signin {
+    background-color: #000000;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-decoration: none;
+    font-style: outfit;
+    color: #7EA6FF;
+    border: 1px solid #7EA6FF;
+    border-radius: 6px;
+    padding: 10px 5px 10px 5px;
+}
+.navbar__menu .create-FormBot {
+    background-color: #1A5FFF;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-decoration: none;
+    font-style: outfit;
+    color: #ffffff;
+    border: 1px solid #7EA6FF;
+    border-radius: 6px;
+    padding: 10px 5px 10px 5px;
+}

@@ -1,0 +1,69 @@
+.main{
+    background: #121212;
+    gap: 20px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.svg {
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+h1 {
+    font-family: Outfit;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(90deg, #4B83FF 0%, #B794F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.description {
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+.primarybtn {
+    width: Hug (200px)px;
+    height: Fixed (64px)px;
+    min-width: 48px;
+    padding: 15px 20px;
+    gap: 0px;
+    border-radius: 6px;
+    opacity: 0px;
+    background: #1A5FFF;
+    color: #ffffff;
+    box-shadow: 0px 1px 0px 0px #FFFFFF33 inset;
+}
+.semicircle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+.figure {
+    filter: blur(1000px);
+    background-color: #4B83FF;
+}
