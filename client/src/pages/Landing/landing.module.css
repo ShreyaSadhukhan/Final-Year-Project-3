@@ -1,4 +1,4 @@
-.main{
+.main {
     background: #121212;
     gap: 20px;
 }
@@ -64,6 +64,18 @@ h1 {
     padding-left: 50px;
 }
 .figure {
-    filter: blur(1000px);
-    background-color: #4B83FF;
+    backdrop-filter: blur(1000px);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    filter: blur(20000px);
+    z-index: -1;
 }

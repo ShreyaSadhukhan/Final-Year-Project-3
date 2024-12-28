@@ -7,6 +7,7 @@ import figure from './Figure.png'
 import semicircle from './Semicircle.png'
 import svg from './SVG.png'
 import triangle from './Triangle.png'
+import googleIcon from './Google Icon.png'
 
 export const assets = {
     blur1,
@@ -17,5 +18,6 @@ export const assets = {
     logo,
     semicircle,
     svg,
-    triangle
+    triangle,
+    googleIcon
 }

@@ -13,7 +13,7 @@ function Navbar() {
                 </div>
                 <div className='navbar__menu'>
                     <button className="signin" type='submit'><Link to="/login">Sign in</Link></button>
-                    <button className="create-FormBot">Create a FormBot</button>
+                    <button className="create-FormBot" ><Link to="/signup">Create a FormBot</Link></button>
                 </div>
             </div>
         </div>
