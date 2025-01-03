@@ -1,24 +1,41 @@
 import { useState } from 'react';
 import styles from './login.module.css';
 import { assets } from '../../assets/assets';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const history = useHistory();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         if (!email || !password) {
             setErrorMessage('Please fill in all fields');
             return;
         }
-        // Perform login logic (e.g., API call)
-        // Reset form fields and error message
-        setEmail('');
-        setPassword('');
-        setErrorMessage('');
+
+        try {
+            const response = await fetch('/api/auth/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                setErrorMessage(errorData.message || 'Error logging in');
+                return;
+            }
+            setEmail('');
+            setPassword('');
+            setErrorMessage('')
+        } catch {
+            setErrorMessage('An unexpected error occurred');
+        }
     };
     return (
         <div className={styles.loginContainer}>

@@ -33,10 +33,12 @@
     align-items: flex-start;
     flex-shrink: 0;
 }
+
 .inputGroup {
     margin-top: 20px;
     padding-top: 100px;
 }
+
 input {
     width: 300px;
     padding: 10px;
@@ -58,6 +60,7 @@ input {
     gap: 20px;
     border-radius: 12px;
 }
+
 .or {
     display: flex;
     align-items: center;
@@ -95,6 +98,13 @@ input {
     border: none;
     background: #121212;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .ellipse2 {
     width: 229px;
     height: 229px;

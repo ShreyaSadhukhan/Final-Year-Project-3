@@ -8,13 +8,25 @@ const app = express();
 const port = 3000
 
 app.use(express.json());
+app.use('/auth', authRoutes);
 app.use(cors());
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send({ message: 'Something went wrong!', error: err.message });
+});
 
-mongoose.connect('mongodb://localhost:27017/your_database', {
+mongoose.connect('mongodb://localhost:27017/workspaces', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+    useFindAndModify: false
+}, (err) => {
+    if (err) {
+        console.error('Error connecting to mongodb:', err);
+    } else {
+        console.log('Connected to mongodb');
+    }       
 });
 
 app.get("/", (req, res) => {
