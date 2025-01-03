@@ -1,79 +1,130 @@
-.App {
+.workspace {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #fff;
     /* Light mode background */
     color: #333;
     /* Light mode text color */
-    height: 100vh;
 }
-
-.App.dark {
-    background-color: #181818;
+.workspace.dark {
+    background-color: #121212;
     /* Dark mode background */
     color: #fff;
     /* Dark mode text color */
 }
-
-.header {
+.workspace-header {
+    border-bottom: 1px solid #555454;
+}
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #ddd;
     /* Light mode border */
+    margin-left: 200px;
 }
-
-.header.dark {
+header.dark {
     border-bottom: 1px solid #555;
     /* Dark mode border */
 }
-
-.workspace-dropdown select {
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.theme-toggle button {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.share-button {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.content {
-    padding: 1rem;
-}
-
-.create-folder-button,
-.typebot {
+.theme-toggle {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    /* Light mode border */
+    gap: 0.5rem;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+}
+input:checked+.slider {
+    background-color: #1A5FFF;
+}
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+.share {
+    background-color: #1A5FFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    margin-bottom: 1rem;
     cursor: pointer;
 }
-
-.create-folder-button.dark,
-.typebot.dark {
-    border: 1px solid #555;
-    /* Dark mode border */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px; 
+    margin-left: 100px;
 }
+.create-folder {
+    display: flex;
+    width: 200px;
+    height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.create-typebot {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;  
 
-.create-folder-button svg,
-.typebot svg {
-    margin-right: 0.5rem;
+}
+.icon {
+    margin-right: 10px;
+    align-items: center;
 }

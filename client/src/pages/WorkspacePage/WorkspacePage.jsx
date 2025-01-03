@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
+import './WorkspacePage.css';
 
-function WorkspacePage() {
+function Workspace() {
   const [isDarkTheme, setIsDarkTheme] = useState(
     localStorage.getItem('isDarkTheme') === 'true'
   );
-  const [workspace, setWorkspace] = useState('');
-  const [username, setUsername] = useState('');
 
   useEffect(() => {
     localStorage.setItem('isDarkTheme', isDarkTheme.toString());
@@ -15,54 +14,34 @@ function WorkspacePage() {
     setIsDarkTheme(!isDarkTheme);
   };
 
-  const handleSelectWorkspace = (event) => {
-    setWorkspace(event.target.value);
-  };
-
-  const handleLogin = (username) => {
-    setUsername(username);
-  };
-
-  const handleLogout = () => {
-    setUsername('');
-  };
-
   return (
-    <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
+    <div className={isDarkTheme ? 'workspace dark' : 'workspace'}>
+      <div className="workspace-header">
       <header>
-        <div>
-          <button onClick={handleToggleTheme}>
-            {isDarkTheme ? 'Light Mode' : 'Dark Mode'}
-          </button>
+        <h2 className="workspace-username">Workspace</h2>
+        <div className="theme-toggle">
+          <span>Light</span>
+          <label className="switch">
+            <input type="checkbox" checked={isDarkTheme} onChange={handleToggleTheme} />
+            <span className="slider round"></span>
+          </label>
+          <span>Dark</span>
         </div>
-        <div>
-          {username ? (
-            <div>
-              Welcome, {username}
-              <button onClick={handleLogout}>Logout</button>
-            </div>
-          ) : (
-            <div>
-              <select value={workspace} onChange={handleSelectWorkspace}>
-                <option value="">Select Workspace</option>
-                <option value="workspace1">Workspace 1</option>
-                <option value="workspace2">Workspace 2</option>
-              </select>
-              <button onClick={() => handleLogin('John Doe')}>Login</button>
-            </div>
-          )}
-        </div>
+        <button className='share'>Share</button>
       </header>
-      <main>
-        <div>
-          <button>Create New Form</button>
-        </div>
-        <div>
-          <button>Create New Folder</button>
-        </div>
-      </main>
+      </div>
+      <div className="content">
+        <button className="create-folder">
+          <span className="icon">+</span>
+          Create a folder
+        </button>
+        <button className="create-typebot">
+          <span className="icon">+</span>
+          Create a typebot
+        </button>
+      </div>
     </div>
   );
 }
 
-export default WorkspacePage;
+export default Workspace;
