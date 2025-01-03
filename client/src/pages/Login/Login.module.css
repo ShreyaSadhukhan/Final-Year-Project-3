@@ -90,7 +90,7 @@ input {
     text-align: center;
 }
 
-.registerbtn {
+.registerbtn a {
     color: #1A5FFF;
     border: none;
     background: #121212;

@@ -25,13 +25,13 @@
     display: flex;
     gap: 20px;
 }
-.navbar__menu .signin {
+.navbar__menu .signin a {
     background: #000000;
     font-size: 1.2rem;
     font-weight: 100;
     text-decoration: none;
     font-style: outfit;
-    color: rgb(128, 168, 255);
+    color: #80a8ff;
     border: 1px solid #7EA6FF;
     border-radius: 6px;
     padding: 10px 5px 10px 5px;

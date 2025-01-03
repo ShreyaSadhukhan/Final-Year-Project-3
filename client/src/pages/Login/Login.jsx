@@ -3,7 +3,6 @@ import styles from './login.module.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 
-
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -40,7 +39,7 @@ function Login() {
                     </div>
                     {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
                     <br />
-                    <button className={styles.loginButton} type="submit">Log in</button>
+                    <button className={styles.loginButton} type="submit"><Link to="/workspacePage"> Log in</Link></button>
                     <p className={styles.or}>OR</p>
                     <button className={styles.googleButton} type="button">
                         <img src={assets.googleIcon} alt="googleIcon" />

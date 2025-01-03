@@ -42,9 +42,17 @@ input {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
+.confirmPassword {
+    border: 1px solid #ff2727;
+    color: #ff2727;
+}
+.passwordText {
+    color:#522224;
+    cursor: pointer;
+    text-align: center;
+}
 .signupButton {
-    background-color: #1A5FFF;
+    background: #1A5FFF;
     color: white;
     border: none;
     cursor: pointer;
@@ -54,6 +62,7 @@ input {
     left: 564px;
     gap: 20px;
     border-radius: 12px;
+    text-decoration: none;
 }
 .or {
     display: flex;
@@ -80,13 +89,12 @@ input {
 .signup {
     margin-top: 20px;
 }
-
 .loginText {
     color: #ffffff;
     cursor: pointer;
     text-align: center;
 }
-.buttonLogin {
+.buttonLogin a {
     color: #1A5FFF;
     background: #121212;
 }
@@ -99,7 +107,6 @@ input {
     opacity: 0px;
     padding-left: 250px;
 }
-
 .ellipse1 {
     align-items: center;
     position: relative;

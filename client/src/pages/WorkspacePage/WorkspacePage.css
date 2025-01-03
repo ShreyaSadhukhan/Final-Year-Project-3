@@ -1,0 +1,79 @@
+.App {
+    background-color: #fff;
+    /* Light mode background */
+    color: #333;
+    /* Light mode text color */
+    height: 100vh;
+}
+
+.App.dark {
+    background-color: #181818;
+    /* Dark mode background */
+    color: #fff;
+    /* Dark mode text color */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    /* Light mode border */
+}
+
+.header.dark {
+    border-bottom: 1px solid #555;
+    /* Dark mode border */
+}
+
+.workspace-dropdown select {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.theme-toggle button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.share-button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.create-folder-button,
+.typebot {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    /* Light mode border */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.create-folder-button.dark,
+.typebot.dark {
+    border: 1px solid #555;
+    /* Dark mode border */
+}
+
+.create-folder-button svg,
+.typebot svg {
+    margin-right: 0.5rem;
+}

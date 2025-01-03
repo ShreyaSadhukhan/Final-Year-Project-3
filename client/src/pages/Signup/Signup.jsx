@@ -3,7 +3,6 @@ import styles from './Signup.module.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 
-
 function Signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -14,7 +13,7 @@ function Signup() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (password !== confirmPassword) {
-            setErrorMessage('Passwords do not match.');
+            setErrorMessage('Passwords do not match');
             return;
         }
         // Perform further validation or API calls here
@@ -47,9 +46,10 @@ function Signup() {
                         <br />
                         <input type='password' placeholder='**********' id='password' value={password} onChange={(event) => setPassword(event.target.value)} />
                         <br />
-                        <label htmlFor='confirmPassword'>Confirm Password</label>
+                        <label htmlFor='confirmPassword' className={styles.confirmPassword}>Confirm Password</label>
                         <br />
-                        <input type='password' placeholder='**********' id='confirmPassword' value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} />
+                        <input type='password' placeholder='**********' className={styles.confirmPassword} id='confirmPassword' value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} />
+                        <p className={styles.passwordText}>enter same password in both fields</p>
                     </div>
                     {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
                     <br />
@@ -59,7 +59,7 @@ function Signup() {
                         <img src={assets.googleIcon} alt="googleIcon" />
                         Sign Up with Google
                     </button>
-                    <p className={styles.loginText}>Already have an account? <button type='createaccount' className={styles.buttonLogin}><Link to="/login">Login </Link></button></p>
+                    <p className={styles.loginText}>Already have an account? <button type='createaccount' className={styles.buttonLogin}><Link to="/login">Login</Link></button></p>
                 </form>
                 <div className={styles.ellipse2}>
                     <img src={assets.ellipse2} alt="ellipse2" />

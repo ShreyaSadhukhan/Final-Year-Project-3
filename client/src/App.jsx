@@ -5,6 +5,7 @@ import Signup from './pages/Signup/Signup'
 import Navbar from './component/Navbar/Navbar'
 import Footer from './component/Footer/Footer'
 import './App.css'
+import WorkspacePage from './pages/WorkspacePage/WorkspacePage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           } />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/workspacePage" element={<WorkspacePage />} />
       </Routes>
     </BrowserRouter>
   )
